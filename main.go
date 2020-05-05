@@ -7,6 +7,7 @@ import (
 
 func main() {
 	r:=gin.Default()
+	gin.SetMode(gin.ReleaseMode)
 
 	r.GET("index", func(c *gin.Context) {
 		c.JSON(http.StatusOK,gin.H{
